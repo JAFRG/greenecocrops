@@ -3,155 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GreenEcoCrops.pt — Diagnóstico de Biodiversidade</title>
+  <title>GreenEcoCrops — Biodiversidade Agrícola</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#14532d',
+              primary: '#16a34a',
+              light: '#dcfce7',
+              accent: '#065f46'
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="min-h-screen bg-green-50 text-gray-800">
 
-  <!-- HERO -->
-  <section class="bg-green-700 text-white py-24 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        Diagnóstico de Biodiversidade para Explorações Agrícolas
-      </h1>
-      <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-        A GreenEcoCrops ajuda grandes produtores e cooperativas a medir e melhorar a biodiversidade da sua exploração, com foco na conformidade com a PAC e valorização económica da produção.
-      </p>
-      <a href="#contact" class="bg-white text-green-700 font-semibold px-8 py-4 rounded-2xl shadow-lg hover:bg-green-100 transition inline-block">
-        Pedir Diagnóstico Piloto
-      </a>
-    </div>
-  </section>
+<body class="bg-brand-light text-gray-800 font-sans">
 
-  <!-- QUEM SOMOS -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<!-- NAVBAR -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-3">
+      <!-- LOGO -->
+      <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#16a34a" />
+        <path d="M50 70C35 55 30 40 50 25C70 40 65 55 50 70Z" fill="white"/>
+        <line x1="50" y1="35" x2="50" y2="70" stroke="#16a34a" stroke-width="4" />
+      </svg>
+
       <div>
-        <h2 class="text-3xl font-bold mb-6">Quem Somos</h2>
-        <p class="text-lg text-gray-700 mb-4">
-          A GreenEcoCrops é uma iniciativa focada na integração da biodiversidade na estratégia das explorações agrícolas.
-        </p>
-        <p class="text-gray-600">
-          Combinamos conhecimento técnico em agronomia e sustentabilidade com ferramentas digitais simples, criando soluções práticas que ajudam produtores a transformar exigências ambientais em vantagem competitiva.
-        </p>
-      </div>
-      <div class="bg-green-100 p-10 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">O Nosso Enquadramento</h3>
-        <p class="text-gray-700">
-          Atuamos num contexto de crescente exigência regulatória europeia (PAC, eco-regimes e metas ESG), apoiando o setor agrícola na adaptação estratégica a estas transformações.
-        </p>
+        <h1 class="font-bold text-lg text-brand-dark">GreenEcoCrops</h1>
+        <p class="text-xs text-gray-500">Agricultural Biodiversity</p>
       </div>
     </div>
-  </section>
 
-  <!-- MISSÃO VISÃO VALORES -->
-  <section class="bg-green-100 py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Missão, Visão e Valores</h2>
+    <!-- BOTÃO HAMBURGER MOBILE -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Missão</h3>
-        <p>
-          Medir, melhorar e valorizar a biodiversidade agrícola, promovendo práticas regenerativas e contribuindo para a sustentabilidade económica das explorações.
-        </p>
+    <!-- MENU -->
+    <nav id="menu" class="hidden md:flex gap-6 text-sm font-medium flex-col md:flex-row mt-4 md:mt-0">
+      <a href="#servicos" class="hover:text-brand-primary">Serviços</a>
+      <a href="#tecnologia" class="hover:text-brand-primary">Tecnologia</a>
+      <a href="#impacto" class="hover:text-brand-primary">Impacto</a>
+      <a href="#sobre" class="hover:text-brand-primary">Quem Somos</a>
+      <a href="#contact" class="hover:text-brand-primary">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-brand-dark text-white py-28 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+      Biodiversidade para uma Agricultura mais Resiliente
+    </h2>
+    <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-green-100">
+      A GreenEcoCrops ajuda produtores agrícolas a medir, melhorar e valorizar a biodiversidade das suas explorações através de diagnósticos técnicos e monitorização ecológica.
+    </p>
+    <a href="#contact" class="bg-white text-brand-dark font-semibold px-8 py-4 rounded-2xl shadow hover:bg-gray-100 transition">
+      Pedir Diagnóstico Piloto
+    </a>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">O Problema</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-gray-600">
+      <div class="p-6">
+        <h3 class="font-semibold mb-2">Regulação crescente</h3>
+        <p>Explorações agrícolas enfrentam novas exigências ambientais da política agrícola europeia.</p>
       </div>
-
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Visão</h3>
-        <p>
-          Tornar a biodiversidade um ativo estratégico central na agricultura europeia, integrando métricas ambientais na tomada de decisão empresarial.
-        </p>
+      <div class="p-6">
+        <h3 class="font-semibold mb-2">Falta de métricas</h3>
+        <p>Muitos produtores não têm ferramentas para medir biodiversidade de forma simples.</p>
       </div>
-
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Valores</h3>
-        <ul class="list-disc list-inside space-y-2 text-left">
-          <li>Rigor técnico e científico</li>
-          <li>Inovação orientada para resultados</li>
-          <li>Sustentabilidade com viabilidade económica</li>
-          <li>Parceria e proximidade com o produtor</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEMA -->
-  <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">O Desafio Atual</h2>
-      <div class="space-y-4 text-lg text-gray-700">
-        <p>• Dificuldade em reportar indicadores ambientais exigidos pela UE</p>
-        <p>• Pressão crescente da PAC e dos eco-regimes</p>
-        <p>• Sustentabilidade vista como custo e não como investimento</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUÇÃO MVP -->
-  <section class="bg-white py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">A Nossa Solução (MVP)</h2>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-green-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-xl font-semibold mb-4">1. Diagnóstico Inicial</h3>
-          <p>
-            Avaliação técnica da biodiversidade da exploração com relatório estruturado e recomendações práticas.
-          </p>
-        </div>
-
-        <div class="bg-green-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-xl font-semibold mb-4">2. Plano de Melhoria</h3>
-          <p>
-            Propostas concretas para regeneração ecológica e alinhamento com requisitos da PAC.
-          </p>
-        </div>
-
-        <div class="bg-green-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-xl font-semibold mb-4">3. Acompanhamento Piloto</h3>
-          <p>
-            Monitorização simplificada durante 3–6 meses para medir evolução e validar impacto.
-          </p>
-        </div>
+      <div class="p-6">
+        <h3 class="font-semibold mb-2">Decisão difícil</h3>
+        <p>Sem dados ecológicos claros é difícil implementar práticas agrícolas regenerativas.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PARA QUEM -->
-  <section class="bg-green-100 py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Para Quem?</h2>
-      <p class="text-lg text-gray-700">
-        Grandes explorações agrícolas, cooperativas e organizações de produtores que necessitam de demonstrar conformidade ambiental e melhorar o seu posicionamento competitivo.
-      </p>
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-14">Serviços</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-8 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-4">Diagnóstico de Biodiversidade</h3>
+        <p class="text-gray-600">Avaliação técnica completa da biodiversidade da exploração agrícola com relatório e recomendações práticas.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-4">Monitorização Ecológica</h3>
+        <p class="text-gray-600">Acompanhamento de indicadores ecológicos para avaliar evolução da biodiversidade ao longo do tempo.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-4">Consultoria Regenerativa</h3>
+        <p class="text-gray-600">Apoio estratégico para implementar práticas agrícolas sustentáveis e melhorar resiliência ecológica.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Seja um dos primeiros projetos piloto</h2>
-      <p class="mb-8 text-gray-600">
-        Estamos a selecionar explorações para implementar o nosso diagnóstico piloto de biodiversidade.
-      </p>
-
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="grid gap-4">
-        <input type="text" name="exploracao" placeholder="Nome da Exploração" required class="p-4 rounded-2xl border" />
-        <input type="email" name="email" placeholder="Email" required class="p-4 rounded-2xl border" />
-        <input type="text" name="localizacao" placeholder="Localização" class="p-4 rounded-2xl border" />
-        <button type="submit" class="bg-green-700 text-white font-semibold px-6 py-4 rounded-2xl shadow-lg hover:bg-green-800 transition">
-          Candidatar ao Projeto Piloto
-        </button>
-      </form>
+<!-- TECNOLOGIA -->
+<section id="tecnologia" class="bg-white py-20 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">Tecnologia</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-8">
+      A GreenEcoCrops integra ferramentas digitais e metodologias científicas para avaliar biodiversidade em sistemas agrícolas.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 text-gray-600">
+      <div>Mapeamento geoespacial da exploração</div>
+      <div>Indicadores ecológicos e biodiversidade</div>
+      <div>Base de dados ambientais e análise técnica</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="bg-green-700 text-white py-6 text-center">
-    <p>© 2026 GreenEcoCrops.pt</p>
-  </footer>
+<!-- IMPACTO -->
+<section id="impacto" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Impacto Ambiental</h2>
+    <div class="grid md:grid-cols-3 gap-10 text-gray-700">
+      <div>
+        <h3 class="font-semibold mb-2">🌱 Regeneração</h3>
+        <p>Promover ecossistemas agrícolas mais equilibrados.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">🐝 Biodiversidade</h3>
+        <p>Proteger polinizadores e espécies benéficas.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">🌍 Clima</h3>
+        <p>Apoiar sistemas agrícolas resilientes às alterações climáticas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="bg-white py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">Quem Somos</h2>
+    <p class="text-gray-600 mb-6">
+      A GreenEcoCrops é uma iniciativa focada na integração da biodiversidade na gestão agrícola. Trabalhamos para fornecer ferramentas técnicas que permitam aos produtores melhorar sustentabilidade, produtividade e resiliência ecológica.
+    </p>
+    <p class="text-gray-600">
+      O nosso objetivo é tornar a biodiversidade um indicador mensurável e útil na tomada de decisões agrícolas.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Projetos Piloto</h2>
+    <p class="text-gray-600 mb-10">
+      Estamos a selecionar explorações agrícolas para os primeiros diagnósticos piloto de biodiversidade.
+    </p>
+    <form class="grid gap-4">
+      <input class="p-4 border rounded-xl" placeholder="Nome da exploração" />
+      <input class="p-4 border rounded-xl" placeholder="Email" />
+      <input class="p-4 border rounded-xl" placeholder="Localização" />
+      <button class="bg-brand-primary text-white font-semibold py-4 rounded-xl hover:bg-green-700 transition">
+        Candidatar ao Projeto Piloto
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-brand-dark text-white text-center py-6">
+  <p>© 2026 GreenEcoCrops — Agricultura e Biodiversidade</p>
+</footer>
+
+<!-- SCRIPT MENU MOBILE -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
